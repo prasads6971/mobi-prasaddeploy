@@ -5,6 +5,7 @@ metadata:
   labels:
     app: prasadapp1
   name: prasadapp1
+  namespace: prasad-project
 spec:
   replicas: 1
   selector:
@@ -24,3 +25,26 @@ spec:
         - containerPort: 80
         resources: {}
 status: {}
+
+## add secvice with nodeport
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: prasadsvc1
+  name: prasadsvc1
+  namespace: prasad-project
+spec:
+  ports:
+  - name: 1923-80
+    port: 1923
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: prasadapp1
+  type: NodePort
+status:
+  loadBalancer: {}
