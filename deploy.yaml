@@ -25,6 +25,9 @@ spec:
         - containerPort: 80
         resources: {}
         imagePullPolicy: Always
+        env:
+        - name : deploy
+          value : app3
 
 ## add secvice with nodeport
 ---
