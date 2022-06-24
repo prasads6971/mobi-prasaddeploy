@@ -27,7 +27,7 @@ spec:
         imagePullPolicy: Always
         env:
         - name : deploy
-          value : app3
+          value : app2
 
 ## add secvice with nodeport
 ---
