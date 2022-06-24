@@ -24,7 +24,7 @@ spec:
         ports:
         - containerPort: 80
         resources: {}
-status: {}
+        imagePullPolicy: Always
 
 ## add secvice with nodeport
 ---
