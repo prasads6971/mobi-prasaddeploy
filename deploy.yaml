@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: prasadapp1
+  name: prasadapp1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prasadapp1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: prasadapp1
+    spec:
+      containers:
+      - image: dockerashu/ashumobi:appv1
+        name: ashumobi
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
